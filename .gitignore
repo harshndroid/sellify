@@ -23,7 +23,6 @@ DerivedData
 
 # Android/IntelliJ
 #
-build/
 .idea
 .gradle
 local.properties
@@ -59,9 +58,7 @@ buck-out/
 /ios/Pods/
 
 .buckconfig
-.editorconfig
 .eslintrc.js
 app.json
-.flowconfig
 .gitattributes
 .prettierrc.js
