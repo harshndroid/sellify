@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">733998778512-p7b6f1ggp2dtbg01siemckc2etfpfmk0.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">733998778512</string>
+    <string name="google_api_key" translatable="false">AIzaSyBSm5c-c0m26GWGOlf3v7U3J6OePBMeWUE</string>
+    <string name="google_app_id" translatable="false">1:733998778512:android:90d541818fa1c2e9dbb015</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBSm5c-c0m26GWGOlf3v7U3J6OePBMeWUE</string>
+    <string name="google_storage_bucket" translatable="false">scrape-a30e1.appspot.com</string>
+    <string name="project_id" translatable="false">scrape-a30e1</string>
+</resources>

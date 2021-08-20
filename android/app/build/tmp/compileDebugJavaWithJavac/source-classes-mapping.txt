@@ -1,0 +1,14 @@
+com/scrape/BuildConfig.java
+ com.scrape.BuildConfig
+com/scrape/ReactNativeFlipper.java
+ com.scrape.ReactNativeFlipper
+ com.scrape.ReactNativeFlipper$1
+ com.scrape.ReactNativeFlipper$2
+ com.scrape.ReactNativeFlipper$2$1
+com/scrape/MainActivity.java
+ com.scrape.MainActivity
+com/scrape/MainApplication.java
+ com.scrape.MainApplication
+ com.scrape.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

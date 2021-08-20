@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_metal.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_metal.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_paper.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_paper.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_app.json.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\raw\\app.json"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnativevectoricons_glyphmaps_entypo.json.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\raw\\node_modules_reactnativevectoricons_glyphmaps_entypo.json"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnativevectoricons_glyphmaps_antdesign.json.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\raw\\node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_ewaste.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_ewaste.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_plastic.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_plastic.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\raw\\node_modules_reactnativevectoricons_glyphmaps_ionicons.json"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome.json.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\raw\\node_modules_reactnativevectoricons_glyphmaps_fontawesome.json"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_src_assets_others.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\src_assets_others.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigation_stack_src_views_assets_backiconmask.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\ReactNative\\Scrape\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "E:\\ReactNative\\Scrape\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    }
+]
