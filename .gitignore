@@ -54,9 +54,3 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
-
-.buckconfig
-.eslintrc.js
-app.json
-.gitattributes
-.prettierrc.js
