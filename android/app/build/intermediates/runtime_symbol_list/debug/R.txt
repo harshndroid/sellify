@@ -2188,11 +2188,12 @@ int string state_expanded_description 0x7f0f009a
 int string state_mixed_description 0x7f0f009b
 int string state_off_description 0x7f0f009c
 int string state_on_description 0x7f0f009d
-int string status_bar_notification_info_overflow 0x7f0f009e
-int string summary_description 0x7f0f009f
-int string tablist_description 0x7f0f00a0
-int string timer_description 0x7f0f00a1
-int string toolbar_description 0x7f0f00a2
+int string state_unselected_description 0x7f0f009e
+int string status_bar_notification_info_overflow 0x7f0f009f
+int string summary_description 0x7f0f00a0
+int string tablist_description 0x7f0f00a1
+int string timer_description 0x7f0f00a2
+int string toolbar_description 0x7f0f00a3
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style Animation_AppCompat_Dialog 0x7f100002

@@ -2189,6 +2189,7 @@ string state_expanded_description
 string state_mixed_description
 string state_off_description
 string state_on_description
+string state_unselected_description
 string status_bar_notification_info_overflow
 string summary_description
 string tablist_description
