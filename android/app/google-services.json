@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "733998778512",
+    "project_id": "scrape-a30e1",
+    "storage_bucket": "scrape-a30e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733998778512:android:90d541818fa1c2e9dbb015",
+        "android_client_info": {
+          "package_name": "com.scrape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733998778512-v4nn5eldn6k1danpbpm804b9thve03k6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scrape",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "733998778512-p7b6f1ggp2dtbg01siemckc2etfpfmk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSm5c-c0m26GWGOlf3v7U3J6OePBMeWUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733998778512-p7b6f1ggp2dtbg01siemckc2etfpfmk0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
