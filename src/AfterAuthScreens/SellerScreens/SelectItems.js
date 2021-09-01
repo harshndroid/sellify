@@ -6,10 +6,9 @@ import {
   StyleSheet,
   ActivityIndicator,
   ScrollView,
+  BackHandler,
 } from 'react-native';
-import {Calendar} from 'react-native-calendars';
 import TopBar from '../../components/TopBar';
-import BottomAlert from '../../components/BottomAlert';
 import Button from '../../components/Button';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -17,16 +16,15 @@ import APIServices from '../../APIServices';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {saveItems} from '../../actions/item';
-import {
-  resetSelectedItems,
-  setSelectedItems,
-} from '../../actions/selectedItems';
+import {setSelectedItems} from '../../actions/selectedItems';
 
 function SelectItems(props) {
-  const [show, setShow] = useState(false);
-  const [selectedDay, setSelectedDay] = useState(Date());
+  const [showSpinner, setShowSpinner] = useState(true);
+
+  setTimeout(() => {
+    setShowSpinner(false);
+  }, 1000);
   useEffect(() => {
-    props.resetSelectedItems();
     APIServices.fetchItems().then(data => {
       let arr = [];
       data.map((item, index) => {
@@ -41,10 +39,18 @@ function SelectItems(props) {
       });
       props.saveItems(arr);
     });
+
+    const back = BackHandler.addEventListener('hardwareBackPress', () => {
+      props.navigation.goBack();
+      return true;
+    });
+    return () => {
+      back.remove();
+    };
   }, []);
 
   const selectionHandler = i => {
-    props.itemList.map((item, index) => {
+    props.itemList.map(item => {
       if (i === item.itemName) {
         item.isSelected = !item.isSelected;
         props.setSelectedItems(item);
@@ -58,48 +64,50 @@ function SelectItems(props) {
     const arr2 = arr.filter(obj => obj.subcategoryName === subCat);
     return (
       <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
-        {arr2.length > 0 ? (
-          arr2.map((item, index) => (
-            <TouchableOpacity
-              onPress={() => selectionHandler(item.itemName)}
-              key={item.itemName}
-              style={{
-                ...Styles.chips,
-                backgroundColor: item.isSelected ? '#80a1e8' : '#fff',
-                elevation: item.isSelected ? 2 : 0,
-              }}>
-              <Text style={{color: item.isSelected ? 'white' : '#80a1e8'}}>
-                {item.itemName}
-              </Text>
-              <Text>
-                <FontAwesome name="rupee" color="#000" size={15} />{' '}
-                {item.itemRate}
-              </Text>
-            </TouchableOpacity>
-          ))
-        ) : (
-          <Text>No item available to select.</Text>
-        )}
+        {arr2.map(item => (
+          <TouchableOpacity
+            onPress={() => selectionHandler(item.itemName)}
+            key={item.itemName}
+            style={{
+              ...Styles.chips,
+              backgroundColor: item.isSelected ? '#80a1e8' : '#fff',
+              elevation: item.isSelected ? 2 : 0,
+            }}>
+            <Text style={{color: item.isSelected ? 'white' : '#80a1e8'}}>
+              {item.itemName}
+            </Text>
+            <Text>
+              <FontAwesome name="rupee" color="#000" size={15} />{' '}
+              {item.itemRate}
+            </Text>
+          </TouchableOpacity>
+        ))}
       </View>
     );
   };
 
   const RenderSubcategories = ({cat}) => {
     var subCats;
-    props.subCategoryList.map((item1, index1) => {
+    props.subCategoryList.map(item1 => {
       if (Object.keys(item1)[0] === cat.categoryName) {
         subCats = item1[Object.keys(item1)[0]];
       }
     });
     if (subCats.length > 0) {
-      return subCats.map((item, index) => (
-        <View
-          key={index}
-          style={{backgroundColor: '#f3f3f3', borderRadius: 4, margin: 10}}>
-          <Text style={{fontWeight: 'bold'}}>{item}</Text>
-          <RenderItem cat={cat.categoryName} subCat={item} />
-        </View>
-      ));
+      return subCats.map((item, index) => {
+        return (
+          <View
+            key={index}
+            style={{backgroundColor: '#f3f3f3', borderRadius: 4, margin: 4}}>
+            {item.split(' ')[1] > 0 && (
+              <Text style={{fontWeight: 'bold'}}>{item.split(' ')[0]}</Text>
+            )}
+            {item.split(' ')[1] > 0 && (
+              <RenderItem cat={cat.categoryName} subCat={item.split(' ')[0]} />
+            )}
+          </View>
+        );
+      });
     } else {
       return (
         <View>
@@ -110,12 +118,7 @@ function SelectItems(props) {
   };
 
   const proceed = () => {
-    setShow(true);
-  };
-
-  const confirm = () => {
-    setShow(false);
-    props.navigation.navigate('ReviewScreen', {selectedDay: selectedDay});
+    props.navigation.navigate('SelectPickupTime');
   };
 
   const RenderCat = () => {
@@ -150,34 +153,14 @@ function SelectItems(props) {
     );
   };
 
+  if (showSpinner)
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <ActivityIndicator color="#80a1e8" size="large" />
+      </View>
+    );
   return (
     <>
-      <BottomAlert
-        onSecondaryBtnPress={() => setShow(false)}
-        onPrimaryBtnPress={() => confirm()}
-        isPrimaryDisabled={selectedDay.length > 10}
-        show={show}
-        children={
-          <>
-            <Text style={{fontSize: 18, textAlign: 'center'}}>
-              Select pickup time
-            </Text>
-            <Calendar
-              markedDates={{
-                [selectedDay]: {selected: true, selectedColor: 'green'},
-              }}
-              onDayPress={day => setSelectedDay(day.dateString)}
-              theme={{
-                arrowColor: '#80a1e8',
-                todayTextColor: '#80a1e8',
-                selectedDayBackgroundColor: '#80a1e8',
-                selectedDayTextColor: '#fff',
-              }}
-              minDate={Date()}
-            />
-          </>
-        }
-      />
       <View style={Styles.container}>
         {props.itemList ? (
           <>
@@ -222,7 +205,6 @@ function matchDispatchToProps(dispatch) {
     {
       saveItems: saveItems,
       setSelectedItems: setSelectedItems,
-      resetSelectedItems: resetSelectedItems,
     },
     dispatch,
   );

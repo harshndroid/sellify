@@ -11,3 +11,10 @@ export function confirmingOTP(data) {
     payload: data,
   };
 }
+
+export function raisingPickupRequest(data) {
+  return {
+    type: 'RAISING_PICKUP_REQUEST',
+    payload: data,
+  };
+}

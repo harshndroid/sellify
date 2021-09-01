@@ -21,8 +21,10 @@ import OtpScreen from './BeforeAuthScreens/OtpScreen';
 import ProfileScreen from './AfterAuthScreens/ProfileScreen';
 import HomeScreen from './AfterAuthScreens/SellerScreens/HomeScreen';
 import SelectItems from './AfterAuthScreens/SellerScreens/SelectItems';
+import SelectPickupTime from './AfterAuthScreens/SellerScreens/SelectPickupTime';
 import ReviewScreen from './AfterAuthScreens/SellerScreens/ReviewScreen';
 import BuyersListScreen from './AfterAuthScreens/SellerScreens/BuyersListScreen';
+import MyRequests from './AfterAuthScreens/SellerScreens/MyRequests';
 import BuyerRequestsScreen from './AfterAuthScreens/BuyerScreens/BuyerRequestsScreen';
 
 import APIServices from './APIServices';
@@ -146,32 +148,48 @@ function App(props) {
     );
   }
   function AuthStacks() {
-    return (
-      <Stack.Navigator initialRouteName="HomeScreen">
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="SelectItems"
-          component={SelectItems}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ReviewScreen"
-          component={ReviewScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="BuyersListScreen"
-          component={BuyersListScreen}
-          options={{headerShown: false}}
-        />
-      </Stack.Navigator>
-    );
+    if (props.user.user_request_status !== 0) {
+      return (
+        <Stack.Navigator initialRouteName="HomeScreen">
+          <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="SelectItems"
+            component={SelectItems}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="SelectPickupTime"
+            component={SelectPickupTime}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ReviewScreen"
+            component={ReviewScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="BuyersListScreen"
+            component={BuyersListScreen}
+            options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      );
+    } else {
+      return (
+        <Stack.Navigator initialRouteName="MyRequests">
+          <Stack.Screen
+            name="MyRequests"
+            component={MyRequests}
+            options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      );
+    }
   }
-
   return loading ? (
     <Loading />
   ) : (
@@ -184,11 +202,49 @@ function App(props) {
               component={BuyerRequestsScreen}
             />
           </Stack.Navigator>
+        ) : props.user.user_request_status === 0 ? (
+          <Drawer.Navigator
+            drawerContentOptions={{
+              labelStyle: {fontFamily: 'Montserrat-Medium'},
+              activeTintColor: '#80a1e8',
+              activeBackgroundColor: 'transparent',
+            }}
+            drawerContent={props => <CustomDrawer {...props} />}>
+            <Drawer.Screen
+              name="AuthStacks"
+              component={AuthStacks}
+              options={{
+                title: 'My Requests',
+                drawerIcon: ({focused}) => (
+                  <Icon2
+                    name="history"
+                    size={20}
+                    color={focused ? '#80a1e8' : 'black'}></Icon2>
+                ),
+              }}
+            />
+            <Drawer.Screen
+              name="ProfileScreen"
+              component={ProfileScreen}
+              options={{
+                title: 'My Profile',
+                headerTitleStyle: {fontFamily: 'Montserrat-Medium'},
+                headerTintColor: 'white',
+                headerStyle: {backgroundColor: '#80a1e8'},
+                drawerIcon: ({focused}) => (
+                  <Icon
+                    name="user"
+                    size={20}
+                    color={focused ? '#80a1e8' : 'black'}></Icon>
+                ),
+              }}
+            />
+          </Drawer.Navigator>
         ) : (
           <Drawer.Navigator
             drawerContentOptions={{
               labelStyle: {fontFamily: 'Montserrat-Medium'},
-              activeTintColor: '#408ec2',
+              activeTintColor: '#80a1e8',
               activeBackgroundColor: 'transparent',
             }}
             drawerContent={props => <CustomDrawer {...props} />}>
@@ -201,7 +257,23 @@ function App(props) {
                   <Icon2
                     name="home"
                     size={20}
-                    color={focused ? '#408ec2' : 'black'}></Icon2>
+                    color={focused ? '#80a1e8' : 'black'}></Icon2>
+                ),
+              }}
+            />
+            <Drawer.Screen
+              name="MyRequests"
+              component={MyRequests}
+              options={{
+                title: 'My Requests',
+                headerTitleStyle: {fontFamily: 'Montserrat-Medium'},
+                headerTintColor: 'white',
+                headerStyle: {backgroundColor: '#80a1e8'},
+                drawerIcon: ({focused}) => (
+                  <Icon2
+                    name="history"
+                    size={20}
+                    color={focused ? '#80a1e8' : 'black'}></Icon2>
                 ),
               }}
             />
@@ -210,15 +282,14 @@ function App(props) {
               component={ProfileScreen}
               options={{
                 title: 'My Profile',
-                headerShown: true,
                 headerTitleStyle: {fontFamily: 'Montserrat-Medium'},
                 headerTintColor: 'white',
-                headerStyle: {backgroundColor: '#408ec2'},
+                headerStyle: {backgroundColor: '#80a1e8'},
                 drawerIcon: ({focused}) => (
                   <Icon
                     name="user"
                     size={20}
-                    color={focused ? '#408ec2' : 'black'}></Icon>
+                    color={focused ? '#80a1e8' : 'black'}></Icon>
                 ),
               }}
             />

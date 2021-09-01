@@ -6,16 +6,21 @@ import {
   Image,
   StyleSheet,
   ActivityIndicator,
+  BackHandler,
 } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Button from '../../components/Button';
-
-import APIServices from '../../APIServices';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {saveCategories, saveSubCategories} from '../../actions/item';
-import {setSelectedCategories} from '../../actions/selectedCategories';
+import {
+  setSelectedCategories,
+  resetSelectedCategories,
+} from '../../actions/selectedCategories';
+import {resetSelectedItems} from '../../actions/selectedItems';
+
+import APIServices from '../../APIServices';
 
 function HomeScreen(props) {
   useEffect(() => {
@@ -34,18 +39,29 @@ function HomeScreen(props) {
     });
   }, []);
 
+  useEffect(() => {
+    const back = BackHandler.addEventListener('hardwareBackPress', () => {
+      props.resetSelectedCategories();
+      BackHandler.exitApp();
+      return true;
+    });
+    return () => {
+      back.remove();
+    };
+  }, []);
+
   const selectionHandler = i => {
-    let _arr = props.categoryList.map((item, index) => {
+    props.categoryList.map((item, index) => {
       if (i === index) {
         item.isSelected = !item.isSelected;
         props.setSelectedCategories(item);
       }
       return {...item};
     });
-    // props.saveCategories(_arr);
   };
 
   const proceed = () => {
+    props.resetSelectedItems();
     props.navigation.navigate('SelectItems');
   };
 
@@ -123,7 +139,7 @@ function HomeScreen(props) {
           ))}
         </View>
       )}
-      <View style={{marginTop: 32}}>
+      <View style={{marginTop: 16}}>
         {props.selectedCategories.length > 0 && (
           <Button title="Proceed" onPress={proceed} />
         )}
@@ -165,6 +181,8 @@ function matchDispatchToProps(dispatch) {
       saveCategories: saveCategories,
       saveSubCategories: saveSubCategories,
       setSelectedCategories: setSelectedCategories,
+      resetSelectedItems: resetSelectedItems,
+      resetSelectedCategories: resetSelectedCategories,
     },
     dispatch,
   );
@@ -172,6 +190,7 @@ function matchDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
+    user: state.user,
     categoryList: state.item.categoryList,
     selectedCategories: state.selectedCategories,
   };

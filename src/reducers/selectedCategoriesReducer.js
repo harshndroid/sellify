@@ -8,6 +8,8 @@ const selectedCategoriesReducer = function (state = [], action) {
         return arr;
       }
       return [...state, action.payload];
+    case 'RESET_SELECTED_CATEGORIES':
+      return [];
     default:
       return state;
   }

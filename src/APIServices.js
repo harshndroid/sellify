@@ -1,4 +1,4 @@
-import {auth, database} from './FirebaseConfig';
+import {auth, database, messaging} from './FirebaseConfig';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const storeUserType = async userType => {
@@ -25,8 +25,9 @@ const logout = () => {
   });
 };
 
-const saveUserPhone = (phone, userType) => {
+const saveUserPhone = async (phone, userType) => {
   console.log('saveUserPhone/');
+  const notifyToken = await messaging().getToken();
   return new Promise((resolve, reject) => {
     database()
       .ref('users')
@@ -43,6 +44,7 @@ const saveUserPhone = (phone, userType) => {
               id: key,
               phone,
               userType,
+              notify_token: notifyToken,
             };
             database()
               .ref('users/' + key)
@@ -56,6 +58,7 @@ const saveUserPhone = (phone, userType) => {
             id: key,
             phone: phone,
             userType,
+            notify_token: notifyToken,
           };
           database()
             .ref('users/' + key)
@@ -99,7 +102,7 @@ const fetchCategories = () => {
 };
 
 const fetchSubCategories = set => {
-  console.log('fetchSubCategories/', set);
+  console.log('fetchSubCategories/');
   return new Promise((resolve, reject) => {
     database()
       .ref('/sub_categories')
@@ -108,19 +111,17 @@ const fetchSubCategories = set => {
       .then(snapshot => {
         const foo = snapshot.val();
         const data = Object.values(foo);
-        // console.log('foo=====', data);
         const cats = Array.from(set);
-        // console.log('====', cats);
         var hashMap = [];
         cats.map((item1, index1) => {
           var arr = [];
-          data.map((item2, index2) => {
-            if (item2.category_name === item1) arr.push(item2.subcategory_name);
+          data.map(item2 => {
+            if (item2.category_name === item1)
+              arr.push(item2.subcategory_name + ' ' + item2.item_count);
           });
 
           hashMap[index1] = {[item1]: arr};
         });
-        // console.log('oooo', hashMap);
         resolve(hashMap);
       });
   });
@@ -157,8 +158,13 @@ const fetchItems = () => {
   });
 };
 
-const raisePickupRequest = request => {
-  console.log('raisePickupRequest/');
+const raisePickupRequest = (request, userData) => {
+  console.log('raisePickupRequest/', request);
+  const {user_id: userId} = userData;
+
+  var tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
+  var localISOTime = new Date(Date.now() - tzoffset).toISOString();
+
   return new Promise((resolve, reject) => {
     const key = database().ref().push().key;
     let data = {
@@ -167,11 +173,17 @@ const raisePickupRequest = request => {
       pickup_address: request.address,
       pickup_time: request.pickupTime,
       pickup_items: request.items,
+      timestamp: localISOTime,
     };
     database()
       .ref('pickup_requests/' + key)
       .update(data)
       .then(() => resolve(data))
+      .catch(e => reject(e));
+    database()
+      .ref('users/' + userId)
+      .update({last_ordered_timestamp: localISOTime, request_status: 0})
+      .then(() => resolve())
       .catch(e => reject(e));
   });
 };
@@ -180,13 +192,14 @@ const fetchRequests = () => {
   console.log('fetchRequests/');
   return new Promise((resolve, reject) => {
     database()
-      .ref('/pickup_requests')
+      .ref('pickup_requests/')
       .orderByChild('phone')
       .once('value')
       .then(snapshot => {
         const foo = snapshot.val();
         if (!foo) reject();
         let arr = Object.values(foo);
+        console.log('===oooooo', arr);
         resolve(arr);
       })
       .catch(e => reject(e));
@@ -210,6 +223,18 @@ const fetchBuyers = () => {
   });
 };
 
+const updateUserRequestStatus = (userData, requestStatus) => {
+  console.log('updateUserRequestStatus/');
+  const {user_id} = userData;
+  return new Promise((resolve, reject) => {
+    database()
+      .ref('users/' + user_id)
+      .update({request_status: requestStatus})
+      .then(() => resolve())
+      .catch(e => reject(e));
+  });
+};
+
 export default {
   getOtp,
   logout,
@@ -221,5 +246,5 @@ export default {
   raisePickupRequest,
   fetchRequests,
   fetchBuyers,
-  pushSubCategories, // temp API
+  updateUserRequestStatus,
 };

@@ -8,6 +8,7 @@ import {saveRequests} from '../../actions/requests';
 
 import APIServices from '../../APIServices';
 function BuyerRequestsScreen(props) {
+  // console.log('====pppppp', props.requestsList);
   useEffect(() => {
     APIServices.fetchRequests()
       .then(data => props.saveRequests(data))
@@ -23,8 +24,8 @@ function BuyerRequestsScreen(props) {
   };
   return (
     <>
-      <TopBar title="Requests" showLeftIcon={false} />
-      {!props.requestsList ? (
+      <TopBar title=" this Requests" showLeftIcon={false} />
+      {/* {!props.requestsList ? (
         <Text>fetching...</Text>
       ) : props.requestsList.length > 0 ? (
         <View>
@@ -38,7 +39,7 @@ function BuyerRequestsScreen(props) {
         </View>
       ) : (
         <Text>No pickup requests.</Text>
-      )}
+      )} */}
     </>
   );
 }

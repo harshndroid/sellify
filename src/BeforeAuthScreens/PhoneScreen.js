@@ -100,7 +100,7 @@ function PhoneScreen(props) {
             />
           </View>
         </View>
-        <View style={{marginTop: 16}}>
+        <View style={{marginTop: 48}}>
           <Button
             disabled={
               !valid ||

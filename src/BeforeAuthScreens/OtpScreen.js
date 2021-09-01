@@ -34,13 +34,11 @@ function OtpScreen(props) {
       storeUserType('buyer');
     }
 
-    BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
-    return () => {
-      BackHandler.removeEventListener(
-        'hardwareBackPress',
-        handleBackButtonClick,
-      );
-    };
+    const back = BackHandler.addEventListener(
+      'hardwareBackPress',
+      handleBackButtonClick,
+    );
+    return () => back.remove();
   }, []);
 
   function confirmCode() {

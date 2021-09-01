@@ -10,7 +10,7 @@ function Button({title, onPress, disabled, callingAPI}) {
         onPress={disabled || callingAPI ? () => {} : onPress}>
         <Text
           style={{
-            color: disabled || callingAPI ? 'grey' : 'white',
+            color: 'white',
             fontSize: 16,
           }}>
           {callingAPI ? 'Please wait...' : title}
@@ -22,8 +22,6 @@ function Button({title, onPress, disabled, callingAPI}) {
 
 const Styles = StyleSheet.create({
   btnView: {
-    // position: 'absolute',
-    // bottom: 20,
     alignSelf: 'center',
     alignItems: 'center',
     width: '100%',
@@ -39,11 +37,11 @@ const Styles = StyleSheet.create({
   },
   disabledBtn: {
     borderRadius: 2,
-    backgroundColor: '#ccc',
     height: 40,
     width: '50%',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgba(128, 161, 232,.4)',
   },
 });
 

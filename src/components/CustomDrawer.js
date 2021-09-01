@@ -16,6 +16,7 @@ import {userAuthorized} from '../actions/user';
 import APIServices from '../APIServices';
 
 const CustomDrawer = props => {
+  console.log('=-=-=--', props.user.user_request_status);
   function logout() {
     APIServices.logout().then(() => {
       props.userAuthorized(false);
@@ -30,7 +31,7 @@ const CustomDrawer = props => {
           justifyContent: 'flex-end',
           paddingHorizontal: 20,
           paddingBottom: 20,
-          backgroundColor: '#408ec2',
+          backgroundColor: '#80a1e8',
           position: 'absolute',
           width: '100%',
         }}>
@@ -58,26 +59,49 @@ const CustomDrawer = props => {
             fontFamily: 'Montserrat-Regular',
             paddingTop: 5,
           }}>
+          {props.user.user_type === 'seller' ? 'Seller' : 'Buyer'}
+        </Text>
+        <Text
+          style={{
+            fontSize: 14,
+            color: 'white',
+            fontFamily: 'Montserrat-Regular',
+            paddingTop: 5,
+          }}>
           {props.user.user_phoneNumber}
         </Text>
       </View>
       <View style={{marginTop: 140}} />
       <DrawerItemList {...props} />
-      <DrawerItem
-        label="My requests"
-        labelStyle={{fontFamily: 'Montserrat-Medium', color: 'grey'}}
-        icon={() => <Icon2 name="history" size={20}></Icon2>}
-        onPress={() => Alert.alert('This section is under development')}
-      />
+      {/* {props.user.user_request_status !== 0 && (
+        <DrawerItem
+          label="My Requestssss"
+          labelStyle={{
+            fontFamily: 'Montserrat-Medium',
+            color: 'grey',
+            marginLeft: 2,
+          }}
+          icon={() => <Icon2 name="history" size={20}></Icon2>}
+          onPress={() => props.navigation.navigate('MyRequests')}
+        />
+      )} */}
       <DrawerItem
         label="Settings"
-        labelStyle={{fontFamily: 'Montserrat-Medium', color: 'grey'}}
+        labelStyle={{
+          fontFamily: 'Montserrat-Medium',
+          color: 'grey',
+          // marginLeft: 2,
+        }}
         icon={() => <Icon3 name="setting" size={20}></Icon3>}
         onPress={() => Alert.alert('This section is under development')}
       />
       <DrawerItem
         label="Logout"
-        labelStyle={{fontFamily: 'Montserrat-Medium', color: 'grey'}}
+        labelStyle={{
+          fontFamily: 'Montserrat-Medium',
+          color: 'grey',
+          // marginLeft: 2,
+        }}
         icon={() => <Icon3 name="logout" size={20}></Icon3>}
         onPress={logout}
       />

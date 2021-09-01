@@ -5,6 +5,7 @@ INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml:1:1
 INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml:1:1-25:12
 INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml:1:1-25:12
 MERGED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml:1:1-25:12
+MERGED from [hermes-debug.aar] C:\Users\Harshxxx\.gradle\caches\transforms-3\fb89699c4ab7b1ee0efebb0df62081e2\transformed\jetified-hermes-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.flipper:flipper:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\ffa8efe646820f621671ae6a81491505\transformed\jetified-flipper-0.93.0\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\1edef9d93ca965c8aa3b0e8f9af08129\transformed\jetified-flipper-network-plugin-0.93.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\34e4a1ed3db89e6fc4127e17336bb7e6\transformed\jetified-flipper-fresco-plugin-0.93.0\AndroidManifest.xml:8:1-15:12
@@ -25,7 +26,6 @@ MERGED from [androidx.browser:browser:1.0.0] C:\Users\Harshxxx\.gradle\caches\tr
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\8db85d827e47c8f0a943a01b5453462d\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\b89a7ceaf7a3392e5efd1bfb9581478a\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Harshxxx\.gradle\caches\transforms-3\b4254aefac0a489a7035262760f163ec\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
-MERGED from [org.webkit:android-jsc:r250230] C:\Users\Harshxxx\.gradle\caches\transforms-3\5af31a79852d63fbc2a9aab126579db4\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\bb5ab6fc365e71cbc6080b2f65896eb1\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:17:1-58:12
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\47bbbc9ddd8620b82b6afc47f7b5eff8\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\1488c03e6a6883a477d9549f9c51eedf\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:15:1-38:12
@@ -252,6 +252,8 @@ uses-sdk
 INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml
 INJECTED from E:\ReactNative\Scrape\android\app\src\main\AndroidManifest.xml
+MERGED from [hermes-debug.aar] C:\Users\Harshxxx\.gradle\caches\transforms-3\fb89699c4ab7b1ee0efebb0df62081e2\transformed\jetified-hermes-debug\AndroidManifest.xml:5:5-44
+MERGED from [hermes-debug.aar] C:\Users\Harshxxx\.gradle\caches\transforms-3\fb89699c4ab7b1ee0efebb0df62081e2\transformed\jetified-hermes-debug\AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.flipper:flipper:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\ffa8efe646820f621671ae6a81491505\transformed\jetified-flipper-0.93.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\ffa8efe646820f621671ae6a81491505\transformed\jetified-flipper-0.93.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.93.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\1edef9d93ca965c8aa3b0e8f9af08129\transformed\jetified-flipper-network-plugin-0.93.0\AndroidManifest.xml:11:5-13:41
@@ -292,8 +294,6 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Hars
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\b89a7ceaf7a3392e5efd1bfb9581478a\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Harshxxx\.gradle\caches\transforms-3\b4254aefac0a489a7035262760f163ec\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Harshxxx\.gradle\caches\transforms-3\b4254aefac0a489a7035262760f163ec\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
-MERGED from [org.webkit:android-jsc:r250230] C:\Users\Harshxxx\.gradle\caches\transforms-3\5af31a79852d63fbc2a9aab126579db4\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r250230] C:\Users\Harshxxx\.gradle\caches\transforms-3\5af31a79852d63fbc2a9aab126579db4\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\bb5ab6fc365e71cbc6080b2f65896eb1\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\bb5ab6fc365e71cbc6080b2f65896eb1\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Harshxxx\.gradle\caches\transforms-3\47bbbc9ddd8620b82b6afc47f7b5eff8\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:19:5-21:41
